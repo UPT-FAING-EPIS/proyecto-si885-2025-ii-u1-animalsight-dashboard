@@ -16,13 +16,16 @@ def cargar_sql(df):
 
     try:
         conn = pyodbc.connect(
-            "DRIVER={ODBC Driver 18 for SQL Server};"
-            f"SERVER={os.getenv('AZURE_SQL_SERVER')};"
-            f"DATABASE={os.getenv('AZURE_SQL_DATABASE')};"
-            f"UID={os.getenv('AZURE_SQL_USER')};"
-            f"PWD={os.getenv('AZURE_SQL_PASSWORD')};"
-            "Encrypt=yes;TrustServerCertificate=no;"
+            "Driver={ODBC Driver 18 for SQL Server};"
+            "Server=tcp:incidentes.database.windows.net,1433;"
+            "Database=incidentes;"
+            "Uid=Luzkalid;"
+            "Pwd=Tacna123;"
+            "Encrypt=yes;"
+            "TrustServerCertificate=no;"
+            "Connection Timeout=30;"
         )
+
         cursor = conn.cursor()
 
         for _, row in df.iterrows():

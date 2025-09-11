@@ -1,6 +1,6 @@
 from etl.scraper import SECTIONS, get_links, extract_text
 from etl.transform import transformar_noticia
-from etl.load import guardar_csv
+from etl.load import guardar_csv, cargar_sql
 
 def run_etl():
     rows = []
@@ -12,7 +12,13 @@ def run_etl():
             resultados = transformar_noticia(medio, link, texto)
             rows.extend(resultados)
 
+    # Guardar en CSV
     df = guardar_csv(rows)
+
+    # Cargar en Azure SQL
+    if not df.empty:
+        cargar_sql(df)
+
     print("ETL terminado. Registros:", len(df))
 
 if __name__ == "__main__":
