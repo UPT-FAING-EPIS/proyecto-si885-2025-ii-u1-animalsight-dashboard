@@ -25,19 +25,31 @@ def cargar_sql(df):
             "TrustServerCertificate=no;"
             "Connection Timeout=30;"
         )
-
         cursor = conn.cursor()
+        cursor.fast_executemany = True  # ⚡ optimiza inserts masivos
 
-        for _, row in df.iterrows():
-            cursor.execute("""
-                INSERT INTO IncidentesTacna (medio, url, ubicacion, lat, lon, snippet)
-                VALUES (?, ?, ?, ?, ?, ?)
-            """, row["medio"], row["url"], row["ubicacion"], row["lat"], row["lon"], row["snippet"])
+        insert_query = """
+            INSERT INTO IncidentesTacna (medio, url, ubicacion, lat, lon, snippet)
+            VALUES (?, ?, ?, ?, ?, ?)
+        """
 
+        # 🚨 Insertar fila por fila con try/except
+        for i, row in df.iterrows():
+            try:
+                cursor.execute(insert_query, 
+                               row.get("medio"), 
+                               row.get("url"), 
+                               row.get("ubicacion"), 
+                               row.get("lat"), 
+                               row.get("lon"), 
+                               row.get("snippet"))
+            except Exception as e:
+                print(f"❌ Error en fila {i}: {e}")
+        
         conn.commit()
         cursor.close()
         conn.close()
         print("✅ Datos cargados en Azure SQL")
 
     except Exception as e:
-        print("❌ Error al cargar en Azure SQL:", e)
+        print("❌ Error general en carga SQL:", e)
