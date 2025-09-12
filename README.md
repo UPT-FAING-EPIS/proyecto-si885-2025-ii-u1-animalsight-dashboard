@@ -37,3 +37,8 @@ git clone https://github.com/tuusuario/proyecto-formatos-01.git
 ## Contribuciones
 
 Se aceptan mejoras en visualización, análisis de datos y filtros avanzados.
+
+## Link del Dashboard
+https://app.powerbi.com/links/ac0nD-DpMI?ctid=b6b466ee-468d-4011-b9fc-fbdcf82ac90a&pbi_source=linkShare
+
+
