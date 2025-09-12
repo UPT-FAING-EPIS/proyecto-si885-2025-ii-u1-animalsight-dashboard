@@ -34,6 +34,6 @@ Este proyecto presenta un **dashboard interactivo de accidentes de tránsito en 
 ```bash
 git clone https://github.com/tuusuario/proyecto-formatos-01.git
 ```
-##Contribuciones
+## Contribuciones
 
 Se aceptan mejoras en visualización, análisis de datos y filtros avanzados.
