@@ -1,9 +1,10 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/VMb-1xPS)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=20079501)
-# Dashboard de Accidentes de Tránsito – Tacna
+
+# Dashboard de Accidentes – Tacna
 
 ## Descripción
-Este proyecto presenta un **dashboard interactivo de accidentes de tránsito en Tacna**, consolidando información de medios locales y fuentes oficiales para facilitar la toma de decisiones basada en datos confiables.
+Este proyecto presenta un **dashboard interactivo de accidentes en Tacna**, consolidando información de medios locales y fuentes oficiales para facilitar la toma de decisiones basada en datos confiables. Incluye accidentes de tránsito, laborales, domésticos y otros eventos con riesgo para la población.
 
 ## Funcionalidades
 - Mapas interactivos de accidentes por ubicación.
@@ -28,17 +29,8 @@ Este proyecto presenta un **dashboard interactivo de accidentes de tránsito en 
 ## Requisitos
 - Conexión a internet.
 - Navegador moderno: Chrome, Firefox o Edge.
-- Datos oficiales actualizados para el dashboard.
+- Datos oficiales y fuentes locales actualizados para el dashboard.
 
 ## Instalación
 ```bash
 git clone https://github.com/tuusuario/proyecto-formatos-01.git
-```
-## Contribuciones
-
-Se aceptan mejoras en visualización, análisis de datos y filtros avanzados.
-
-## Link del Dashboard
-https://app.powerbi.com/links/ac0nD-DpMI?ctid=b6b466ee-468d-4011-b9fc-fbdcf82ac90a&pbi_source=linkShare
-
-
