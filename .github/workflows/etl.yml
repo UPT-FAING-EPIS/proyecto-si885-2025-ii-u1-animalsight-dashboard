@@ -2,7 +2,7 @@ name: ETL diario
 
 on:
   schedule:
-    - cron: "20 19 * * *"   # todos los días a las 6 AM UTC
+    - cron: "30 19 * * *"   # todos los días a las 6 AM UTC
   workflow_dispatch:
 
 jobs:
